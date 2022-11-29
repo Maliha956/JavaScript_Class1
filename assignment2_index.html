@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        Even/Odd Checker
+    </h2>
+    <form action="" onsubmit="Checker(); return false">
+        <h4>Enter a Number:</h4>
+        <Label>Number</Label>
+        <input type="text" id="num">
+        <button type="submit">Check</button>
+        <h3 id="result"></h3>
+
+    </form>
+    <script>
+        function Checker() {
+
+            let number = document.querySelector("#num").value;
+            result = number % 2;
+            document.querySelector("#result").innerHTML = "If a zero appears then entered number is even otherwise odd :" + result;
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
