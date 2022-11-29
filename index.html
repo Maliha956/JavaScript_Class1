@@ -5,95 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Percentage Calculator</title>
-    <style>
-        .section{
-            background-color: rgb(214, 166, 103);
-        }
-        .container {
-            
-            width: auto;
-            border: 2px solid goldenrod;
-            margin-left: 30px;
-            margin-right: 30px;
-            padding-bottom: 25px;
-            padding-top: 25px;
-            border-radius: 5px;
-            background-color: rgb(23, 134, 88);
-        }
-
-        .tm {
-            display: inline-block;
-            margin: 5px;
-            padding: 3px;
-            border-radius: 5px;
-            margin-left: 69px;
-            text-decoration: underline;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: goldenrod;
-        }
-
-        .om {
-            display: inline-block;
-            margin: 5px;
-            padding: 3px;
-            border-radius: 5px;
-            margin-left: 150px;
-            text-decoration: underline;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: goldenrod;
-        }
-        h3{
-            text-decoration: underline;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: goldenrod;
-        }
-        h2{
-            text-align: center;
-            text-decoration: underline;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: goldenrod;
-        }
-        button{
-            color: goldenrod;
-            background-color: rgb(23, 134, 88);
-            border-radius: 5px;
-            padding: 4px;
-            margin-top: 15px;
-            margin-left: 365px;
-            border: 2px solid goldenrod;
-        }
-    </style>
+    <title>Document</title>
 </head>
 
 <body>
-    <section>
+    <h2>
+        Even/Odd Checker
+    </h2>
+    <form action="" onsubmit="Checker(); return false">
+        <h4>Enter a Number:</h4>
+        <Label>Number</Label>
+        <input type="text" id="num">
+        <button type="submit">Check</button>
+        <h3 id="result"></h3>
 
-        <h2>Percentage Calculator</h2>
-        <div class="container">
-            <form class="marks" onsubmit = "calc(); return false">
-                <div class="tm">
-                    <label for="tm">Total Marks</label>
-                    <input type="text" id="tm">
-                </div>
-                <div class="om">
-                    <label for="om">Obtained Marks</label>
-                    <input type="text" id="om">
-                </div>
-                <button type="submit">Calculate</button>
-            </form>
-            <h3 id="result"></h3>
-        </div>
-    </section>
+    </form>
     <script>
-        function calc(){
-            let tm = document.querySelector("#tm").value;
-        let om = document.querySelector("#om").value;
-        result=om*100/tm;
-        document.querySelector("#result").innerHTML=("Calculated Percentage : "+result+"%")
+        function Checker() {
+
+            let number = document.querySelector("#num").value;
+            result = number % 2;
+            document.querySelector("#result").innerHTML = "If a zero appears then entered number is even otherwise odd :" + result;
+
         }
-        
-          </script>
+
+
+
+    </script>
 </body>
 
 </html>
