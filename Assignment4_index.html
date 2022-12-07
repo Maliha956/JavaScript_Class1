@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=7, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        h1{
+            background-color: rgb(83, 235, 189);
+            text-align: center;
+            color: goldenrod;
+            text-decoration: underline;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border: 2px solid goldenrod;
+            margin: 5px;
+            padding: 3px;
+            border-radius: 5px;
+            height: 45px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Conversion</h1>
+    <br><br>
+        
+    <script>
+        let var1 = prompt("Enter The Temperature (C for Celcius or F for Farenheit) ");
+        if(var1 == 'C' || var1=='c'){
+            let var2 = prompt("Enter the temperature in Celcius");
+            result=(var2 * 9/5) + 32;
+            document.write("Temperature in Celsius :  "+var2+" C");
+            document.write("\nTempurature in Farenheit after conversion : "+result+" F");
+        }
+        else if(var1 == 'F' || var1=='f'){
+            let var3 = prompt("Enter the temperature in Farenheit");
+            result=(var3  - 32) * 5/9;
+            document.write("Temperature in Farenheit :  "+var3+" F");
+            document.write("\nTempurature in Celsius after conversion : "+result+" C");
+        }
+        else{
+            document.write("Invalid Input");
+        }
+    </script>
+</body>
+</html>
